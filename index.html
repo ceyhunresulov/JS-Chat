@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="chat">
+      <div class="current-user">
+        <div class="current-user-content">
+          <img src="./img/person.png" alt="" class="current-user-img" />
+          <h3 class="current-user-name">name</h3>
+        </div>
+        <i class="fas back-icon fa-arrow-left"></i>
+      </div>
+      <ul class="chat-box">
+        <li class="message-list">
+          <span class="message">message</span>
+        </li>
+        <li class="message-list me-list">
+          <span class="message message-me">message</span>
+        </li>
+      </ul>
+      <form action="" class="form">
+        <input type="text" class="input" />
+        <button type="submit" class="btn">
+          <i class="fas submit-icon fa-paper-plane"></i>
+        </button>
+      </form>
+      <ul class="users">
+        <!-- <li class="user">
+          <img src="./img/person.png" alt="" class="user-img" />
+          <span class="user-name">Ceyhun</span>
+        </li> -->
+      </ul>
+      <form action="" class="login-form">
+        <h1 class="login-title">Login</h1>
+        <h3 id="errorMessage">Username or Passwor is not correct</h3>
+        <div class="name-box">
+          <label for="name">add name</label><br />
+          <input type="text" id="name" />
+        </div>
+        <div class="gmail-box">
+          <label for="gmail">add gmail</label><br />
+          <input type="password" id="pass" />
+        </div>
+        <button type="submit" class="login-btn">submit</button>
+      </form>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
