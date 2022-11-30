@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -15,6 +15,7 @@
     <title>Document</title>
   </head>
   <body>
+    <button class="logout">Logut</button>
     <div class="chat">
       <div class="current-user">
         <div class="current-user-content">
@@ -24,12 +25,12 @@
         <i class="fas back-icon fa-arrow-left"></i>
       </div>
       <ul class="chat-box">
-        <li class="message-list">
-          <span class="message">message</span>
-        </li>
-        <li class="message-list me-list">
-          <span class="message message-me">message</span>
-        </li>
+        <!-- <li class="message-list">
+            <span class="message">message</span>
+          </li>
+          <li class="message-list me-list">
+            <span class="message message-me">message</span>
+          </li> -->
       </ul>
       <form action="" class="form">
         <input type="text" class="input" />
@@ -55,6 +56,7 @@
           <input type="password" id="pass" />
         </div>
         <button type="submit" class="login-btn">submit</button>
+        <a href="./register.html" class="register-link">Go register</a>
       </form>
     </div>
     <script src="./app.js"></script>

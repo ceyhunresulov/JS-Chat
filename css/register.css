@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 41, 41);
+  height: 100vh;
+}
+.register {
+  height: 60%;
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+input {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+.name-box {
+  margin-bottom: 1rem;
+}
+.btn {
+  background-color: cadetblue;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.error {
+  background-color: red;
+  width: 90%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 30px;
+  display: none;
+}
+.login-link {
+  margin-top: 1rem;
+  color: cadetblue;
+}

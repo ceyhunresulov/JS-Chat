@@ -5,27 +5,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: cadetblue;
+  background-color: rgb(36, 41, 41);
   height: 100vh;
+}
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 5px;
+  display: none;
 }
 .fas {
   cursor: pointer;
 }
 .chat {
   background-color: beige;
-  min-height: 90vh;
+  height: 90vh;
   width: 400px;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .chat-box {
+  margin: 0;
   padding: 0.5rem;
-  width: 100%;
+  width: 95%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  height: 80%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  -ms-scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity;
 }
 
 .current-user {
-  background-color: darkcyan;
+  background-color: rgb(16, 54, 55);
   box-sizing: border-box;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -33,11 +57,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 0.8rem;
+  width: 100%;
 }
 .current-user-content {
   display: flex;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 .current-user-img {
   height: 50px;
@@ -46,7 +72,8 @@ body {
   margin-right: 0.5rem;
 }
 .current-user-name {
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1.3rem;
   justify-self: flex-start;
 }
 .back-icon {
@@ -63,15 +90,41 @@ body {
   justify-content: flex-end;
 }
 .message {
+  position: relative;
   background-color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   box-sizing: border-box;
   font-size: 1.3rem;
-  border-radius: 20px;
+  border-radius: 10px;
   display: inline-block;
+  max-width: 70%;
+  overflow-wrap: break-word;
 }
 .message-me {
-  background-color: darkslategrey;
+  background-color: rgb(16, 54, 55);
+  color: white;
+}
+.message-me span {
+  color: white;
+}
+.date {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  font-size: 0.5rem;
+  color: black;
+}
+.day-box {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.day {
+  background-color: darkgray;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: white;
 }
 .form {
   position: absolute;
@@ -93,7 +146,7 @@ body {
   border: none;
 }
 .submit-icon {
-  color: cadetblue;
+  color: rgb(16, 54, 55);
   font-size: 1.3rem;
 }
 .login-form {
@@ -107,7 +160,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* display: none; */
   border-radius: 10px;
 }
 .name-box {
@@ -127,7 +179,10 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
-
+.register-link {
+  color: cadetblue;
+  margin-top: 1rem;
+}
 #errorMessage {
   display: none;
   color: red;
@@ -141,19 +196,29 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: aquamarine;
+  background-color: rgb(13, 16, 15);
   border-radius: 10px;
   overflow: auto;
 }
 .user {
+  position: relative;
   list-style: none;
   margin: 1rem 0.5rem;
   display: flex;
   align-items: center;
-  background-color: cadetblue;
+  background-color: rgb(16, 54, 55);
   border-radius: 5px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+.new-msg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  color: greenyellow;
+  border-radius: 50%;
 }
 .user-img {
   height: 60px;
@@ -162,7 +227,10 @@ body {
 }
 .user-name {
   margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
 }
+
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
 }
