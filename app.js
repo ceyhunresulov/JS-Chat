@@ -63,13 +63,29 @@ function createUserList(users) {
       }
     })
     .map((item) => {
-      userList.innerHTML += `<li class="user">
-  <img src="./img/person.png" alt="" class="user-img" />
-  <span class="user-name">${item.name}</span>
-  <span class="new-msg">${
-    (item.messages[me] || []).filter((item) => item.show === false).length || ""
-  }</span>
-</li>`;
+      // create elements
+      const li = document.createElement("li");
+      const img = document.createElement("img");
+      const spanName = document.createElement("span");
+      const spanMsg = document.createElement("span");
+      // add class
+      li.classList.add("user");
+      img.classList.add("user-img");
+      spanName.classList.add("user-name");
+      spanMsg.classList.add("new-msg");
+      img.setAttribute("src", "./img/person.png");
+      console.log("salam");
+      // add elements
+      spanName.innerHTML = item.name;
+      spanMsg.innerHTML =
+        (item.messages[me] || []).filter((item) => item.show === false)
+          .length || "";
+
+      li.appendChild(img);
+      li.appendChild(spanName);
+      li.appendChild(spanMsg);
+
+      userList.appendChild(li);
     });
 }
 
@@ -213,40 +229,45 @@ function createMessage(messages) {
     month[new Date().getMonth()]
   } ${new Date().getFullYear()}`;
   chatBox.innerHTML = "";
+
   messages.forEach((item) => {
+    const li = document.createElement("li");
+    const spanMsg = document.createElement("span");
+    const spanDate = document.createElement("span");
+    li.classList.add("message-list");
+    spanMsg.classList.add("message");
+    spanDate.classList.add("date");
+    spanMsg.innerHTML = item.message;
+    spanDate.innerHTML = item.date;
+    spanMsg.appendChild(spanDate);
+    li.appendChild(spanMsg);
     if (item.from === me) {
+      li.classList.add("me-list");
+      spanMsg.classList.add("message-me");
       if (!item.day) {
-        chatBox.innerHTML += `<li class="message-list me-list">
-      <span class="message message-me">${item.message}
-      <span class="date">${item.date}</span>
-      </span>
-      </li>`;
+        chatBox.appendChild(li);
       } else {
-        chatBox.innerHTML += `<li class="day-box"><span class="day">${
-          item.day === nowDate ? "today" : item.day
-        }</span></li>`;
-        chatBox.innerHTML += `<li class="message-list me-list">
-        <span class="message message-me">${item.message}
-        <span class="date">${item.date}</span>
-        </span>
-        </li>`;
+        const liDay = document.createElement("li");
+        const spanDay = document.createElement("span");
+        liDay.classList.add("day-box");
+        spanDay.classList.add("day");
+        spanDay.innerHTML = item.day === nowDate ? "today" : item.day;
+        liDay.appendChild(spanDay);
+        chatBox.appendChild(liDay);
+        chatBox.appendChild(li);
       }
     } else if (item.from === currentUserName.innerHTML) {
       if (!item.day) {
-        chatBox.innerHTML += `<li class="message-list">
-      <span class="message">${item.message}
-      <span class="date">${item.date}</span>
-      </span>
-      </li>`;
+        chatBox.appendChild(li);
       } else {
-        chatBox.innerHTML += `<li class="day-box"><span class="day">${
-          item.day === nowDate ? "today" : item.day
-        }</span></li>`;
-        chatBox.innerHTML += `<li class="message-list">
-      <span class="message">${item.message}
-      <span class="date">${item.date}</span>
-      </span>
-      </li>`;
+        const liDay = document.createElement("li");
+        const spanDay = document.createElement("span");
+        liDay.classList.add("day-box");
+        spanDay.classList.add("day");
+        spanDay.innerHTML = item.day === nowDate ? "today" : item.day;
+        liDay.appendChild(spanDay);
+        chatBox.appendChild(liDay);
+        chatBox.appendChild(li);
       }
     }
   });
