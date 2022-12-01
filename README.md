@@ -6,5 +6,5 @@
 #### 4. Mesaj qutusunda hər bir mesajın göndərilmə tarixi qeyd olunur
 ## Qeyd
 ### Bu layihəni localstorage istifadə edərək yazmışam. Chatdan istifadə etmək üçün əvvəlcə ən az iki fərqli ad ilə qeydiyyatdan keçməlisiz. İki ayrı səhifə açanda error verəcək. buna görə də eyni səhifədən logout edərək digər istifadəçi adı ilə giriş etməlisiz. Diqqətiniz üçün təşəkkürlər.
-## [Demo](https://calculator-js-pro.netlify.app/)
-![]([https://raw.githubusercontent.com/ceyhunresulov/js-calculator/34ba53d0a1dc14e8a642be6592e886024ce681cc/img/calc.png](https://github.com/ceyhunresulov/JS-Chat/blob/master/img/contact2.png?raw=true))
+## [Demo](https://personal-chat-js.netlify.app)
+![](https://github.com/ceyhunresulov/JS-Chat/blob/master/img/contact2.png)
