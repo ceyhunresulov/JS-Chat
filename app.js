@@ -103,7 +103,8 @@ function goToİnbox(users) {
 function postMessage(users) {
   formMessage.addEventListener("submit", async (e) => {
     e.preventDefault();
-    console.log("2");
+    console.log("salam");
+    console.log("salam");
     const month = [
       "January",
       "February",
@@ -128,14 +129,10 @@ function postMessage(users) {
       (item) => item.name === currentUserName.innerHTML
     ).messages;
     if (messagesMe[currentUserName.innerHTML]) {
-      console.log("3");
-
       let checkDay = messagesMe[currentUserName.innerHTML].find(
         (item) => item.day === day
       );
       if (checkDay) {
-        console.log("4");
-
         messagesMe[currentUserName.innerHTML].push({
           from: me,
           message: message.value,
@@ -150,8 +147,6 @@ function postMessage(users) {
           mlSeconds: mlSeconds,
         });
       } else {
-        console.log("5");
-
         messagesMe[currentUserName.innerHTML].push({
           from: me,
           message: message.value,
@@ -169,8 +164,6 @@ function postMessage(users) {
         });
       }
     } else {
-      console.log("6");
-
       messagesMe[currentUserName.innerHTML] = [
         {
           from: me,
@@ -194,7 +187,6 @@ function postMessage(users) {
     localStorage.setItem("users", JSON.stringify(users));
     createMessage(messagesMe[currentUserName.innerHTML]);
     userList.innerHTML = "";
-    users = JSON.parse(localStorage.getItem("users"));
     createUserList(users);
     goToİnbox(users);
     message.value = "";
