@@ -74,7 +74,6 @@ function createUserList(users) {
       spanName.classList.add("user-name");
       spanMsg.classList.add("new-msg");
       img.setAttribute("src", "./img/person.png");
-      console.log("salam");
       // add elements
       spanName.innerHTML = item.name;
       spanMsg.innerHTML =
@@ -119,8 +118,6 @@ function goToİnbox(users) {
 function postMessage(users) {
   formMessage.addEventListener("submit", async (e) => {
     e.preventDefault();
-    console.log("salam");
-    console.log("salam");
     const month = [
       "January",
       "February",
@@ -270,6 +267,8 @@ function createMessage(messages) {
         chatBox.appendChild(li);
       }
     }
+    const msgList = document.querySelectorAll(".message-list");
+    msgList[msgList.length - 1].scrollIntoView();
   });
 }
 

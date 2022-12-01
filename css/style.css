@@ -39,13 +39,7 @@ body {
   flex-direction: column;
   justify-self: flex-end;
   height: 80%;
-  overflow: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -ms-scroll-chaining: none;
-  overscroll-behavior: contain;
-  -ms-scroll-snap-type: y proximity;
-  scroll-snap-type: y proximity;
+  overflow: auto;
 }
 
 .current-user {
